@@ -1,6 +1,8 @@
+const { join } = require('path');
 (async () => {
     let failed = false;
-    const packageJson = require('./package.json');
+    const path = join(process.cwd(), 'package.json');
+    const packageJson = require(path);
     const { devDependencies, dependencies } = packageJson;
 
     for (const [key, value] of Object.entries(devDependencies)) {
