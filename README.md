@@ -2,11 +2,29 @@
 
 This is a quick GitHub action to confirm that all dependencies in a `package.json` file are pinned to a specific semver version.
 
-## Live Version
+## Usage
 
-This page is not yet deployed.
+The configuration is minimal - here's an example action:
 
-<!--This page is currently deployed. [View the live website.]()-->
+```yaml
+name: Dependency Validation
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    name: Validate Dependencies are Pinned
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout Source Files
+        uses: actions/checkout@v3
+
+      - name: Check Dependencies
+        uses: naomi-lgbt/dependency-pin-check@main
+```
 
 ## Feedback and Bugs
 
