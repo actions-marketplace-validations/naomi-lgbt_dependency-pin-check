@@ -9,7 +9,7 @@ const { join } = require('path');
     console.table(devDependencies);
 
     for (const [key, value] of Object.entries(devDependencies)) {
-        if (/\^/.test(value) || /~/.test(value)) {
+        if (/^\^/.test(value) || /^~/.test(value)) {
             console.warn(`devDependencies ${key} version is not fixed`);
             failed = true;
         }
@@ -19,7 +19,7 @@ const { join } = require('path');
     console.table(dependencies);
 
     for (const [key, value] of Object.entries(dependencies)) {
-        if (/"^/.test(value) || /"~/.test(value)) {
+        if (/^\^/.test(value) || /^~/.test(value)) {
             console.warn(`dependencies ${key} version is not fixed`);
             failed = true;
         }
