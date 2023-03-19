@@ -1,6 +1,6 @@
-# Project Name
+# Naomi's Dependency Validator
 
-Project Description
+This is a quick GitHub action to confirm that all dependencies in a `package.json` file are pinned to a specific semver version.
 
 ## Live Version
 
