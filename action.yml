@@ -2,5 +2,5 @@ name: "Naomi's Dependency Validator"
 description: "A basic action to confirm that all npm dependencies are pinned."
 
 runs:
-  using: "node18"
+  using: "node16"
   main: "index.js"
